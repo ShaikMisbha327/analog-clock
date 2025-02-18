@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #1b1b1b);
+}
+
+.clock {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 10px solid gold;
+    background: radial-gradient(circle, #111, #000);
+    box-shadow: 0px 0px 15px rgb(249, 222, 70);
+    background-image: url("https://i.pinimg.com/236x/c1/ca/6b/c1ca6b433058441cd1eb87ba6fd46ca1.jpg");
+    background-position: center;
+    position: relative;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: gold;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 1);
+}
+
+.number {
+    position: absolute;
+    color: gold;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(0deg);
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+}
+
+.hour {
+    width: 6px;
+    height: 60px;
+    background: red;
+}
+
+.minute {
+    width: 4px;
+    height: 85px;
+    background: silver;
+}
+
+.second {
+    width: 2px;
+    height: 90px;
+    background:yellow;
+    box-shadow: 0 0 10px yellow;
+}
